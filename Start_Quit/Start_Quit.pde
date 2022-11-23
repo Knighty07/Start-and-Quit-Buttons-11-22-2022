@@ -30,8 +30,8 @@ void draw () {
     background(0); //Night Mode not considered yet
   //
   //Hover Over FEature
-  println("X-value", quitButtonX, quitButtonX+quitButtonWidth);
-  println("Y-value", quitButtonY, quitButtonY+quitButtonHeight);
+  println("X-value", quitButtonX, mouseX, quitButtonX+quitButtonWidth);
+  println("Y-value", quitButtonY, mouseY, quitButtonY+quitButtonHeight);
   if () {
     quitButtonColor = hydro;
   } 
