@@ -22,23 +22,10 @@ void setup ()
 //
 void draw () 
 {
-  if ( noNowReallyStart==true ) {
-    background(0); //Night Mode not considered yet
-    //
-    //Hover Over Feature
-    println("X-value", quitButtonX, mouseX ,quitButtonX+quitButtonWidth );
-    println("Y-value", quitButtonY, mouseY ,quitButtonY+quitButtonHeight ); 
-    //
-    //Quit Button Hover Over Feature
-    if (mouseX>quitButtonX && mouseX<quitButtonX+quitButtonWidth && mouseY>quitButtonY && mouseY<quitButtonY+quitButtonHeight) {
-      quitButtonColour = hydro; //Remember Knight Mode
-    } else {
-      quitButtonColour = red; //Remember Day Mode
-    } //End Quit Button Colour
-    //
-    fill(quitButtonColour); 
-    rect( quitButtonX, quitButtonY, quitButtonWidth, quitButtonHeight ); //Quit Button with Hoverover
-  }
+  if ( noNowReallyStart==true ) 
+ { programo();
+ }
+ 
 } //End draw
 void keyPressed () {
   //Post OS Level Start Button
@@ -54,6 +41,7 @@ void mousePressed () {
   //OS Level Start Button
   start=true;
   println("PRESS SPACE TO START");
+  //Hint Bug if continue pressing mouse
   //
    //Quit Button: Logical Rectangle, see println in draw()
   if ( mouseX>quitButtonX && mouseX<quitButtonX+quitButtonWidth && mouseY>quitButtonY && mouseY<quitButtonY+quitButtonHeight ) exit();
